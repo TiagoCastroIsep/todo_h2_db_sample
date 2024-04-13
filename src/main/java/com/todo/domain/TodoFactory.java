@@ -5,5 +5,5 @@ import com.todo.vo.TodoDesc;
 import com.todo.vo.TodoId;
 
 public interface TodoFactory {
-    Todo createTodo(TodoId todoId, TodoDesc todoDesc, TodoComplete todoComplete);
+    Todo createTodo(TodoId todoId, TodoDesc todoDesc, TodoComplete todoComplete, int version);
 }

@@ -8,11 +8,13 @@ public class Todo {
     private final TodoId todoId;
     private final TodoDesc todoDesc;
     private final TodoComplete todoComplete;
+    private int version;
 
-    public Todo(TodoId todoId, TodoDesc todoDesc, TodoComplete todoComplete) {
+    public Todo(TodoId todoId, TodoDesc todoDesc, TodoComplete todoComplete, int version) {
         this.todoId = todoId;
         this.todoDesc = todoDesc;
         this.todoComplete = todoComplete;
+        this.version = version;
     }
 
     public TodoId getTodoId() {
@@ -27,12 +29,17 @@ public class Todo {
         return todoComplete;
     }
 
+    public int getVersion() {
+        return version;
+    }
+
     @Override
     public String toString() {
         return "Todo{" +
                 "todoId=" + todoId +
                 ", todoDesc=" + todoDesc +
                 ", todoComplete=" + todoComplete +
+                ", version=" + version +
                 '}';
     }
 }

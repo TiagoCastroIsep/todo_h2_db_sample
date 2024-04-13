@@ -17,11 +17,6 @@ public class TodoDataModel {
     public TodoDataModel() {
     }
 
-    public TodoDataModel(String desc, boolean completed) {
-        this.desc = desc;
-        this.completed = completed;
-    }
-
     public TodoDataModel(int id, String desc, boolean completed) {
         this.id = id;
         this.desc = desc;
@@ -49,6 +44,14 @@ public class TodoDataModel {
 
     public int getVersion() {
         return version;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
     @Override

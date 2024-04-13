@@ -1,6 +1,7 @@
 package com.todo;
 
 import com.todo.controller.Controller;
+import com.todo.domain.TodoDomainService;
 import com.todo.domain.TodoFactoryImpl;
 import com.todo.dto.TodoDto;
 import com.todo.repository.TodoRepository;
@@ -21,12 +22,12 @@ public class Main {
 
             TodoDataModel todoDataModel = new TodoDataModel(1, "hey", false, 1);
 
-            TodoService todoService = new TodoService(new TodoFactoryImpl(), todoRepository);
+            TodoService todoService = new TodoService(new TodoDomainService(new TodoFactoryImpl()), todoRepository);
 
             Controller controller = new Controller(todoService);
 
-            TodoDto todoDto = new TodoDto(1, "hey", false);
-            TodoDto todoDto2 = new TodoDto(2, "hello", true);
+            TodoDto todoDto = new TodoDto(1, "hey", false, 0);
+            TodoDto todoDto2 = new TodoDto(2, "hello", true, 0);
 
             System.out.println("first add: " + controller.addTodo(todoDto));
             System.out.println("first add: " + controller.addTodo(todoDto2));

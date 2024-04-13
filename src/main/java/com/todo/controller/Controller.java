@@ -20,4 +20,16 @@ public class Controller {
     public List<TodoDto> getTodos() {
         return todoService.findAll();
     }
+
+    public TodoDto getTodoById(int id) {
+        return todoService.findById(id);
+    }
+
+    public TodoDto updateTodo(TodoDto todoDto) {
+        return todoService.updateTodo(todoDto);
+    }
+
+    public void deleteTodo(int todoId) {
+        todoService.deleteTodo(todoId);
+    }
 }

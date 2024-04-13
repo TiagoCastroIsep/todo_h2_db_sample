@@ -7,7 +7,7 @@ import com.todo.vo.TodoId;
 public class TodoFactoryImpl implements TodoFactory {
 
     @Override
-    public Todo createTodo(TodoId todoId, TodoDesc todoDesc, TodoComplete todoComplete) {
-        return new Todo(todoId, todoDesc, todoComplete);
+    public Todo createTodo(TodoId todoId, TodoDesc todoDesc, TodoComplete todoComplete, int version) {
+        return new Todo(todoId, todoDesc, todoComplete, version);
     }
 }
